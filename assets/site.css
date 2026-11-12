@@ -87,6 +87,13 @@
   }
   nav a:hover, nav a[aria-current="location"] { color: var(--text); }
   nav a:hover::after, nav a[aria-current="location"]::after { transform: scaleX(1); }
+  nav .nav-num {
+    display: inline-block; min-width: 1.1em; margin-right: .5em;
+    color: #6b7c96; font-size: .9em; font-weight: 700; font-variant-numeric: tabular-nums;
+    transition: color .2s ease;
+  }
+  nav a:hover .nav-num, nav a[aria-current="location"] .nav-num { color: var(--green); }
+  @media (max-width: 900px) { nav .nav-num { min-width: 1.3em; margin-right: .6em; } }
   .menu-toggle {
     display: none; width: 44px; height: 44px; padding: 0;
     align-items: center; justify-content: center; flex-direction: column; gap: 5px;
@@ -253,7 +260,7 @@
   @media (max-width: 900px) {
     .hero { grid-template-columns: 1fr; gap: 12px; padding: 68px 0 70px; }
     .hero-copy { text-align: center; }
-    .hero-copy .eyebrow, .hero-actions { justify-content: center; }
+    .hero-copy .eyebrow, .hero .hero-actions { justify-content: center; }
     .intro { margin-inline: auto; }
     .hero-art { min-height: 360px; margin-top: -2px; }
     .logo-halo { width: min(76vw, 410px); }
