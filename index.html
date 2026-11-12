@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Master Download Manager — fast, free downloads</title>
+<meta name="description" content="Master Download Manager is a free, open-source download manager for Windows, macOS and Linux. Segmented downloads, browser capture, video and audio, image galleries and BitTorrent, in one window.">
+<meta name="color-scheme" content="dark light">
+<meta property="og:title" content="Master Download Manager">
+<meta property="og:description" content="Segmented downloads, browser capture, video, galleries and BitTorrent — free and open source.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236366f1'/%3E%3Cpath d='M32 14v26m0 0 10-10m-10 10L22 30M18 46h28' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top" aria-label="Master Download Manager">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14"/><path d="M32 14v26m0 0 10-10m-10 10L22 30M18 46h28"/></svg>
+      <span>Master Download Manager</span>
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#platforms">Platforms</a>
+      <a href="#privacy">Privacy</a>
+      <a class="ghost" href="https://github.com/Akshat-530/masterdownloadmanager/releases">Releases</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Free and open source · No ads · No telemetry</p>
+    <h1>Downloads that <em>finish</em>.</h1>
+    <p class="lede">Master Download Manager takes a file apart across many connections, keeps it
+      resumable across crashes and restarts, and puts video, image galleries and torrents in the
+      same list as everything else.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/Akshat-530/masterdownloadmanager/releases/latest">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 19h16"/></svg>
+        Download for Windows
+      </a>
+      <a class="btn" href="https://github.com/Akshat-530/masterdownloadmanager/releases">All releases</a>
+    </div>
+    <p class="fine">Windows 10 and 11 · macOS · Linux · Portable build available</p>
+  </div>
+</section>
+
+<section id="features" class="sec">
+  <div class="wrap">
+    <h2>Everything in one list</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Segmented downloads</h3>
+        <p>One file, many connections. The engine splits large files, reopens what drops, and
+           rejoins the pieces as they land.</p>
+      </article>
+      <article class="card">
+        <h3>Crash-safe resume</h3>
+        <p>The part file lives beside the file itself and carries its own state, so a restart
+           picks up where it stopped instead of from zero.</p>
+      </article>
+      <article class="card">
+        <h3>Browser capture</h3>
+        <p>A native messaging host hands downloads from Chrome, Chromium, Edge, Brave, Opera,
+           Vivaldi and Firefox straight to the app.</p>
+      </article>
+      <article class="card">
+        <h3>Video and audio</h3>
+        <p>Page downloads through yt-dlp, with lux, Streamlink and Ember as fallbacks for pages
+           yt-dlp cannot read. Live streams via Streamlink.</p>
+      </article>
+      <article class="card">
+        <h3>Image galleries</h3>
+        <p>Whole galleries through gallery-dl, with folders named after the site and the set.</p>
+      </article>
+      <article class="card">
+        <h3>BitTorrent</h3>
+        <p>Magnets and <code>.torrent</code> files in the same list, with seeding limits,
+           blocklists and proxy support.</p>
+      </article>
+      <article class="card">
+        <h3>Scheduler and queues</h3>
+        <p>Start a queue at a time, limit it to a window, retry what fails, and keep a second
+           queue for later.</p>
+      </article>
+      <article class="card">
+        <h3>Speed control</h3>
+        <p>Per-download and global limits, so a large download does not take the whole line.</p>
+      </article>
+      <article class="card">
+        <h3>Archives</h3>
+        <p>Extract <code>.zip</code>, <code>.tar</code> and <code>.xz</code> after the download;
+           RAR and 7z through a 7-Zip you already have.</p>
+      </article>
+      <article class="card">
+        <h3>Checksums</h3>
+        <p>Verify a finished file against MD5, SHA-1 or SHA-256 without leaving the app.</p>
+      </article>
+      <article class="card">
+        <h3>Remote control</h3>
+        <p>Off by default. When you turn it on, paired phones and computers on your own network
+           can add downloads over HTTPS.</p>
+      </article>
+      <article class="card">
+        <h3>85 languages</h3>
+        <p>The interface, dates, sizes and speeds follow the language you choose.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="platforms" class="sec alt">
+  <div class="wrap">
+    <h2>Where it runs</h2>
+    <div class="rows">
+      <div class="row">
+        <strong>Windows</strong>
+        <span>10 and 11, 64-bit. Installer, or a portable folder that keeps its settings beside the program.</span>
+      </div>
+      <div class="row">
+        <strong>macOS</strong>
+        <span>Apple silicon and Intel builds.</span>
+      </div>
+      <div class="row">
+        <strong>Linux</strong>
+        <span>AppImage, <code>.deb</code>, <code>.rpm</code> and <code>.tar.gz</code>.</span>
+      </div>
+    </div>
+    <p class="fine">Releases are built from the source on GitHub and published with checksums.</p>
+  </div>
+</section>
+
+<section id="privacy" class="sec">
+  <div class="wrap narrow">
+    <h2>Private by construction</h2>
+    <p>There is no telemetry, no analytics, no account and no advertising. The app talks to the
+       servers you give it, to its own release list when it checks for updates, and to the helper
+       programs you choose to install. It sends nothing else anywhere.</p>
+    <p>A crash is written to a file in the app's own data folder and stays there; it goes nowhere
+       unless you attach it to a report yourself.</p>
+    <p>The local automation API listens on <code>127.0.0.1</code> only, behind a token.
+       Remote control binds the network interfaces you pick, with pairing, and is off until you
+       enable it.</p>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="wrap narrow">
+    <h2>Free, and open</h2>
+    <p>Master Download Manager is free software under the GNU GPL v3 or later. The source is
+       published, the builds are made from it on GitHub, and the third-party assets and helper
+       programs are listed with their licences.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/Akshat-530/masterdownloadmanager">Source on GitHub</a>
+      <a class="btn" href="#features">What it does</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>Master Download Manager — free and open source under GPL-3.0-or-later.</p>
+    <p class="fine">No telemetry. No bundled offers. No account.</p>
+  </div>
+</footer>
+
+</body>
+</html>
