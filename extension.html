@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070b">
+  <meta name="description" content="Connect your browser to Master Download Manager: load the extension in developer mode, keep the folder, run the app, and every download lands in MDM.">
+  <link rel="canonical" href="https://akshat-530.github.io/masterdownloadmanager/extension.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Master Download Manager">
+  <meta property="og:title" content="Browser integration — Master Download Manager">
+  <meta property="og:description" content="Turn on developer mode, load the unpacked extension, run the app — the extension says Connected and every download lands in MDM.">
+  <meta property="og:url" content="https://akshat-530.github.io/masterdownloadmanager/extension.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Browser integration — Master Download Manager</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg class="svg-assets" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="mdm-logo" viewBox="0 0 820 728">
+      <image href="assets/hero.png" x="0" y="0" width="820" height="728" preserveAspectRatio="none" />
+    </symbol>
+  </svg>
+
+  <header class="topbar-wrap">
+    <div class="shell topbar">
+      <a class="brand" href="index.html" aria-label="Master Download Manager home">
+        <svg class="brand-logo" viewBox="0 0 820 728" role="img" aria-label="Master Download Manager logo"><use href="#mdm-logo"></use></svg>
+        <span class="brand-copy"><strong>MASTER</strong><small>DOWNLOAD MANAGER</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="main-nav" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <nav id="main-nav" aria-label="Main navigation">
+        <a href="index.html#features">Features</a>
+        <a href="extension.html" aria-current="page">Extension</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#download">Download</a>
+        <a href="index.html#credits">Credits</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="shell">
+      <section class="hero" aria-labelledby="ext-title">
+        <div class="hero-copy">
+          <div class="eyebrow">Browser integration</div>
+          <h1 id="ext-title">Every download,<br><span class="accent">straight to the app.</span></h1>
+          <p class="intro">With the extension loaded, a download in your browser is handed to Master Download Manager the moment it starts — same file, same page, same cookies, no copy in the browser's folder.</p>
+          <div class="hero-actions">
+            <a class="primary-link" href="https://github.com/Akshat-530/masterdownloadmanager-app/releases">Download the extension <span aria-hidden="true">&#8599;</span></a>
+            <a class="secondary-link" href="#steps">Setup, step by step</a>
+          </div>
+          <p class="hero-note"><strong>Supported:</strong> Chrome, Chromium, Edge, Brave, Opera, Vivaldi and Firefox.</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="shell" id="steps">
+      <section class="content-section reveal" aria-labelledby="steps-title">
+        <div class="section-heading">
+          <div class="eyebrow">Setup</div>
+          <h2 id="steps-title">Five minutes, once.</h2>
+          <p>The extension is loaded from a folder on your PC, so the browser can only use it while that folder exists. Read step 3 twice.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card reveal" style="--icon:#a6f52b;--glow:rgba(166,245,43,.2)">
+            <div class="feature-icon step-num" aria-hidden="true">01</div>
+            <h3>Turn on Developer mode</h3>
+            <p>In Chrome, Edge, Brave, Opera or Vivaldi open the extensions page and switch on <strong>Developer mode</strong> (top right). In Firefox open <code>about:debugging</code> and choose <strong>This Firefox</strong>.</p>
+          </article>
+          <article class="feature-card reveal" style="--icon:#35caff;--glow:rgba(53,202,255,.2)">
+            <div class="feature-icon step-num" aria-hidden="true">02</div>
+            <h3>Download the extension</h3>
+            <p>On the GitHub <a href="https://github.com/Akshat-530/masterdownloadmanager-app/releases">Releases</a> page take <strong>MDM_Browser_Extension.zip</strong> from the latest release.</p>
+          </article>
+          <article class="feature-card reveal" style="--icon:#ffbd5b;--glow:rgba(255,189,91,.2)">
+            <div class="feature-icon step-num" aria-hidden="true">03</div>
+            <h3>Extract it — and keep the folder</h3>
+            <p>Right-click the zip, <strong>Extract All</strong>, and put the folder somewhere permanent (for example <code>Documents\MDM Browser Extension</code>). The browser loads the extension from that folder every time: if you move or delete it, the extension disappears and you will have to load it again.</p>
+          </article>
+          <article class="feature-card reveal" style="--icon:#d16cff;--glow:rgba(189,67,246,.2)">
+            <div class="feature-icon step-num" aria-hidden="true">04</div>
+            <h3>Load the unpacked extension</h3>
+            <p>Chrome and the others: <strong>Load unpacked</strong>, then pick the folder you extracted. Firefox: <strong>Load Temporary Add-on</strong>, then pick the <code>manifest.json</code> inside that folder.</p>
+          </article>
+          <article class="feature-card reveal" style="--icon:#79e9c0;--glow:rgba(121,233,192,.18)">
+            <div class="feature-icon step-num" aria-hidden="true">05</div>
+            <h3>Run the app</h3>
+            <p>Start Master Download Manager and let it sit in the notification area — the extension talks to it locally. Nothing else to configure; the app registers the connection with your browser itself.</p>
+          </article>
+          <article class="feature-card reveal" style="--icon:#ff7d9c;--glow:rgba(255,125,156,.18)">
+            <div class="feature-icon step-num" aria-hidden="true">06</div>
+            <h3>It says Connected — you are done</h3>
+            <p>Open the extension's popup: when it reads <strong>Connected</strong>, downloads in that browser go to MDM. If it says <strong>Disconnected</strong>, start the app first, then reopen the popup.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section reveal" aria-labelledby="notes-title">
+        <div class="section-heading">
+          <div class="eyebrow">Good to know</div>
+          <h2 id="notes-title">Three things people ask afterwards.</h2>
+        </div>
+        <p class="ref"><strong>Keep the folder.</strong> This is an unpacked extension: the browser reads it from disk on every start. Move it and the extension is gone; delete it and you repeat step 2.</p>
+        <p class="ref"><strong>Developer mode stays on.</strong> Chrome shows a small "developer mode extensions" notice at startup. That is normal for an extension installed this way — the extension itself needs no extra permissions beyond downloads, cookies and the local connection to the app.</p>
+        <p class="ref"><strong>Firefox loads it for the session.</strong> A temporary add-on has to be added again after Firefox restarts — repeat step 4, from the same folder.</p>
+        <div class="hero-actions" style="margin-top:26px">
+          <a class="primary-link" href="https://github.com/Akshat-530/masterdownloadmanager-app/releases">Releases and the extension zip <span aria-hidden="true">&#8599;</span></a>
+          <a class="secondary-link" href="index.html">Back to the app</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="shell footer">
+    <span><strong>Master Download Manager</strong> &middot; Built for better downloads.</span>
+    <span>Independent project &middot; not affiliated with any other download manager.</span>
+  </footer>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>
