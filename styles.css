@@ -43,8 +43,9 @@ code{
   padding:1px 5px;
 }
 .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
-.narrow{max-width:760px}
+.narrow{max-width:780px}
 
+/* header */
 .top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);
   backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .top-in{display:flex;align-items:center;justify-content:space-between;height:64px;gap:18px}
@@ -54,9 +55,8 @@ code{
 .brand svg path{stroke:#fff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;fill:none}
 nav{display:flex;gap:22px;align-items:center;font-size:14.5px;color:var(--ink-2)}
 nav a:hover{color:var(--ink)}
-nav .ghost{border:1px solid var(--line);border-radius:999px;padding:6px 14px;color:var(--ink)}
-nav .ghost:hover{border-color:var(--brand)}
 
+/* hero */
 .hero{padding:96px 0 72px;position:relative;overflow:hidden}
 .hero::before{
   content:"";position:absolute;inset:-40% 30% 40% -20%;pointer-events:none;
@@ -67,38 +67,33 @@ nav .ghost:hover{border-color:var(--brand)}
 .eyebrow{color:var(--brand-2);font-weight:600;font-size:14px;letter-spacing:0.02em;margin:0 0 14px}
 h1{font-size:clamp(38px,6vw,64px);line-height:1.05;letter-spacing:-0.03em;margin:0 0 20px;font-weight:750}
 h1 em{font-style:normal;color:var(--brand)}
-.lede{font-size:clamp(17px,2vw,20px);color:var(--ink-2);max-width:64ch;margin:0 0 30px}
-.cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.btn{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:999px;
-  padding:12px 22px;font-weight:600;font-size:15px;transition:transform .12s ease,border-color .12s ease,background .12s ease}
-.btn:hover{transform:translateY(-1px);border-color:var(--brand)}
-.btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
-.btn.primary:hover{filter:brightness(1.08)}
+.lede{font-size:clamp(17px,2vw,20px);color:var(--ink-2);max-width:64ch;margin:0 0 26px}
 .fine{color:var(--ink-3);font-size:14px;margin:16px 0 0}
 
-.sec{padding:84px 0;border-top:1px solid var(--line)}
+/* sections */
+.sec{padding:78px 0;border-top:1px solid var(--line)}
 .sec.alt{background:var(--bg-2)}
-h2{font-size:clamp(26px,3.4vw,36px);letter-spacing:-0.02em;margin:0 0 30px;font-weight:700}
+h2{font-size:clamp(26px,3.4vw,36px);letter-spacing:-0.02em;margin:0 0 26px;font-weight:700}
+h3.group{margin:38px 0 14px;font-size:17px;font-weight:650;letter-spacing:-0.01em;color:var(--ink)}
+h3.group:first-of-type{margin-top:0}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px 20px}
-.card h3{margin:0 0 8px;font-size:16.5px;letter-spacing:-0.01em}
-.card p{margin:0;color:var(--ink-2);font-size:14.8px}
+/* feature grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 20px 18px}
+.card h4{margin:0 0 7px;font-size:16px;letter-spacing:-0.01em;font-weight:650}
+.card p{margin:0;color:var(--ink-2);font-size:14.6px}
 
-.rows{display:grid;gap:10px}
-.row{display:grid;grid-template-columns:160px 1fr;gap:18px;padding:18px 20px;border:1px solid var(--line);
-  border-radius:var(--radius);background:var(--card)}
-.row strong{font-weight:650}
-.row span{color:var(--ink-2)}
-@media (max-width:640px){
-  .row{grid-template-columns:1fr;gap:6px}
-  nav a:not(.ghost){display:none}
-}
-
-.sec p{color:var(--ink-2);margin:0 0 16px}
+/* prose and lists */
+.sec p{color:var(--ink-2);margin:0 0 15px}
 .sec p strong{color:var(--ink)}
+.credits{margin:0 0 18px;padding-left:20px;color:var(--ink-2);font-size:14.8px}
+.credits li{margin:0 0 6px}
 
+/* footer */
 .foot{border-top:1px solid var(--line);padding:34px 0 44px}
 .foot-in{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--ink-3);font-size:14px}
 .foot p{margin:0}
+
+@media (max-width:640px){
+  nav a:first-child,nav a:nth-child(2){display:none}
+}
