@@ -94,3 +94,40 @@
         });
       }
     })();
+
+/* Download buttons: resolve each one to the newest release asset that fits it.
+   The links in the markup point at the Releases page, so they still work when this fails
+   (offline, rate limit, or no release published yet). */
+(function () {
+  var REPO = 'Akshat-530/masterdownloadmanager-app';
+  var WANT = [
+    ['[data-dl="setup"]', /setup[^\/]*\.exe$/i],
+    ['[data-dl="portable"]', /portable[^\/]*\.zip$/i],
+    ['[data-dl="extension"]', /browser[_-]?extension[^\/]*\.zip$/i],
+    ['[data-dl="extension-firefox"]', /\.xpi$/i]
+  ];
+  if (!window.fetch) return;
+  fetch('https://api.github.com/repos/' + REPO + '/releases?per_page=30', {
+    headers: { Accept: 'application/vnd.github+json' }
+  }).then(function (r) {
+    if (!r.ok) throw new Error('releases ' + r.status);
+    return r.json();
+  }).then(function (releases) {
+    if (!Array.isArray(releases)) return;
+    WANT.forEach(function (pair) {
+      var url = null;
+      for (var i = 0; i < releases.length && !url; i++) {
+        var assets = releases[i].assets || [];
+        for (var j = 0; j < assets.length; j++) {
+          if (pair[1].test(assets[j].name)) { url = assets[j].browser_download_url; break; }
+        }
+      }
+      if (!url) return;
+      var links = document.querySelectorAll(pair[0]);
+      for (var k = 0; k < links.length; k++) {
+        links[k].setAttribute('href', url);
+        links[k].setAttribute('title', 'Latest release: ' + url.split('/').pop());
+      }
+    });
+  }).catch(function () { /* keep the Releases page links */ });
+})();
